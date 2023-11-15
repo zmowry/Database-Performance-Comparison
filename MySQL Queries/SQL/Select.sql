@@ -1,0 +1,1 @@
+SELECT * FROM speed_test.top50;

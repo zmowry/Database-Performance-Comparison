@@ -1,0 +1,2 @@
+INSERT INTO speed_test.top50 (`Company Name`, `Industry`, `Sector`, `HQ State`, `Founding Year`, `Annual Revenue 2022-2023 (USD in Billions)`, `Market Cap (USD in Trillions)`,`Stock Name`, `Annual Income Tax in 2022-2023 (USD in Billions)`, `Employee Size`)
+VALUES ('Doofenshmirtz Evil Inc', 'World Domination', 'Weapons Manufacturing', 'New York', 2007, 0, 0, 'EVIL', 0, 2);
