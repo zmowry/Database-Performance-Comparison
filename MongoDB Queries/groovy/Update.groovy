@@ -7,16 +7,16 @@ try {
 	//Retrieve MongoDB collection from JMeter variable
     	MongoCollection<Document> collection = vars.getObject("collection");
 
-	//Define empty filter (update all documents in collection)
-	Document filter = new Document();
+	//Define  filter 
+	Document filter = new Document("HQ State", "Arizona");
 
 	//Define modifications using $set operator to specific fields
-    	Document modifications = new Document("\$set", new Document("Industry", "Agriculture").append("HQ State", "Alaska"));
+    	Document modifications = new Document("\$set", new Document("HQ State", "Not Arizona"));
 
 	//Update many documents in collection based on filter and modifications
     	collection.updateMany(filter, modifications);
     		
-    	return "All documents in the collection modified";
+    	return "Documents modified";
     	
     }
     
