@@ -7,7 +7,7 @@ try {
     	MongoCollection<Document> collection = vars.getObject("collection");
 
 	// Define filter to delete documents with selected attributes
-    	collection.deleteMany(eq("Sector", "IT Services"));
+    	collection.deleteMany(eq("Sector", "Weapons Manufacturing"));
 
     	return"Documents deleted";
     }
