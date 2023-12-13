@@ -8,12 +8,9 @@ try {
     	MongoCollection<Document> collection = vars.getObject("collection");
 
 	//Query for document with specified attribute
-    	Document result = collection.find(eq("Sector", "Communication Equipments")).first();
+    	List<Document> result = collection.find(eq("Sector", "Computer Hardware")).into(new ArrayList<>());
 
-	//If document is found, store its ObjectID in a JMeter variable
-    	vars.put("exampleDocumentId", result.get("_id").toString());
-
-    	return"Document in the Communication Equipments sector found" 
+    	return "Documents in the Computer Hardware sector found" 
     }
     catch(Exception e) {
     	SampleResult.setSuccessful(false);
